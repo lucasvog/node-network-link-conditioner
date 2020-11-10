@@ -1,0 +1,26 @@
+{
+  "name": "network-link-conditioner",
+  "version": "1.0.0",
+  "description": "A node wrapper for the macOS network link conditioner",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "start":"node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasvog/node-network-link-conditioner.git"
+  },
+  "keywords": [
+    "network"
+  ],
+  "author": "Lucas Vogel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucasvog/node-network-link-conditioner/issues"
+  },
+  "homepage": "https://github.com/lucasvog/node-network-link-conditioner#readme",
+  "dependencies": {
+    "run-applescript": "^4.0.0"
+  }
+}
