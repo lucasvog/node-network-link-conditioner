@@ -1,6 +1,6 @@
 {
   "name": "network-link-conditioner",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "A node wrapper for the macOS network link conditioner",
   "main": "index.js",
   "scripts": {
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/lucasvog/node-network-link-conditioner#readme",
   "dependencies": {
     "run-applescript": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=0.10"
   }
 }
