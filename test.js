@@ -1,29 +1,17 @@
-var NetworkLinkConditioner = require("./index");
+var nlc = require("./index.js");
 
-var nlc = new NetworkLinkConditioner();
-async function test(){
-    try{
-    await nlc.on();
-    wait(2);
-    await nlc.off();
-    wait(2);
-    await nlc.getProfileNames();
-    wait(2);
-    await nlc.setProfile("3G");
-    wait(2);
-    await nlc.on();
-    wait(2);
-    await nlc.off();
-    }catch(e){
+async function test() {
+    try {
+        nlc.setDelay(1);
+        await nlc.on();
+        await nlc.off();
+        const profiles = await nlc.getProfileNames();
+        console.log(profiles);
+        await nlc.setProfile(profiles[1]);
+        await nlc.on();
+        await nlc.off();
+    } catch (e) {
         console.log(e);
     }
 }
 test();
-
-async function wait(seconds){
-    return new Promise((resolve)=>{
-        setTimeout(()=>{
-            resolve();
-        },seconds)
-    })
-}
