@@ -3,7 +3,7 @@
 
 
 # Node Network Link Conditioner Wrapper
-*A node wrapper for the macOS Network Link Conditioner. 
+*A node wrapper for the MacOS Network Link Conditioner. 
 Ideal for automating your test setup on a Mac.*
  </div>
 
@@ -14,7 +14,7 @@ This is using applescript to get or set parameters of the conditioner. As a resu
 You also have to allow the accessibility-setting in 🍎>system preferences>security>Accessibility for the program executing this code. But normally you will be asked to do that the first time you execute some code like the example below.
 #### Before using
  To use this, you will need to do the following things:
- 1. Have a device/VM that runs macOS
+ 1. Have a device/VM that runs MacOS
  2. Have the *Network Link Conditioner* installed. Instructions can be found [here](https://nshipster.com/network-link-conditioner/).
 
  ## Installation
@@ -34,6 +34,7 @@ nlc.setDelay(1);
 
 const profiles = await nlc.getProfileNames();
 await nlc.setProfile(profiles[1]);
+await nlc.setProfile("3G");
 
 await nlc.on();
 await nlc.off();
@@ -53,10 +54,10 @@ Disables the Network Link Conditioner.
 Gets all available Profiles as an array of strings.
 
 **`setProfile(NameAsString)`**
-Sets a profile. Name has to be a string.
+Sets a profile. The Name has to be a string.
 
 **`setDelay(timeInSeconds)`**
-This sets the delay between actions in applescript. If the code fails on your mashine, you might have to increase this number.
+This sets the delay between actions in applescript. If the code fails on your machine, you might have to increase this number.
 
 
 
