@@ -5,6 +5,7 @@
 
 # Node Network Link Conditioner Wrapper
 [![npm version](https://img.shields.io/npm/v/network-link-conditioner.svg?style=flat-square)](https://www.npmjs.org/package/network-link-conditioner)
+
 *A node wrapper for the MacOS Network Link Conditioner. 
 Ideal for automating your test setup on a Mac.*
 
@@ -20,7 +21,7 @@ You also have to allow the accessibility-setting in 🍎 >system preferences>sec
  1. Have a device/VM that runs MacOS
  2. Have the *Network Link Conditioner* installed. Instructions can be found [here](https://nshipster.com/network-link-conditioner/).
 
- ## Installation
+## Installation
 
  ```bash
 $ npm install network-link-conditioner
@@ -53,7 +54,7 @@ Enables the Network Link Conditioner.
 Disables the Network Link Conditioner.
 
 **`getProfileNames()`**
-Gets all available Profiles as an array of strings.
+Gets all available profiles as an array of strings.
 
 **`setProfile(NameAsString)`**
 Sets a profile. The name has to be a string.
